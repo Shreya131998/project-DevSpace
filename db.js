@@ -11,7 +11,7 @@ MongoClient.connect(url, (err, client)=>{
     module.exports = client
 
     const app = require('./app')
-    app.listen(7000, ()=>{
+    app.listen(process.env.PORT, ()=>{
         console.log("server listening on 7000...")
     })
 })
